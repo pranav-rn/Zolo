@@ -1,6 +1,5 @@
-// src/components/GeminiChat.tsx
 import { useState } from "react";
-import { getGeminiResponse } from "../services/gemini";
+import { getDeepSeekResponse } from "../services/deepseek";
 import { Send } from "lucide-react";
 import zoloImage from "../assets/Zolo.png";
 
@@ -11,7 +10,7 @@ interface Message {
   timestamp: Date;
 }
 
-export default function GeminiChat() {
+export default function DeepSeekChat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [newMessage, setNewMessage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -33,8 +32,8 @@ export default function GeminiChat() {
     setLoading(true);
 
     try {
-      // Get Gemini response
-      const response = await getGeminiResponse(newMessage);
+      // Get DeepSeek response
+      const response = await getDeepSeekResponse(newMessage);
 
       // Add bot message
       const botMessage: Message = {
@@ -46,7 +45,7 @@ export default function GeminiChat() {
 
       setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
-      console.error("Error getting Gemini response:", error);
+      console.error("Error getting DeepSeek response:", error);
       // Add error message
       const errorMessage: Message = {
         id: messages.length + 2,
