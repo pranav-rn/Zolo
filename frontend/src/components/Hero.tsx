@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="mt-16 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-blue-100/20 to-green-100/20 rounded-2xl"></div>
           <img
-            src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=1600"
+            src="/public/Zolo.png"
             alt="Mental wellness illustration"
             className="rounded-2xl shadow-xl w-full object-cover"
           />
