@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Send, User, Bot } from "lucide-react";
-
+import GeminiChat from "../GeminiChat";
 interface Message {
   id: number;
   text: string;
@@ -129,6 +129,7 @@ const Dashboard = () => {
           </form>
         </div>
       </div>
+      <GeminiChat />
     </div>
   );
 };
