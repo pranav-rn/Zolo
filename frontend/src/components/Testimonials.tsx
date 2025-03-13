@@ -2,11 +2,11 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Shreya Ghosh",
+    name: "Deeksha",
     role: "Psychology Professor",
     content:
       "One of the biggest issue as a psychologist is to get people to open up. Sometimes, building a rapport may even take a year. This AI companion has been able to do that in a matter of weeks.",
-    rating: 5,
+    rating: 4,
   },
   {
     name: "Dr. Sampurna",
@@ -20,7 +20,7 @@ const testimonials = [
     role: "Student",
     content:
       "Being a person who has personally gone through mental health issues, I can say one of the biggest issue is not finding a compatible therapist. This AI companion has been able to provide me with the support I need and also provided me with a list of therapists who I can reach out to.",
-    rating: 5,
+    rating: 4,
   },
 ];
 
