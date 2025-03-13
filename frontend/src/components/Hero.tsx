@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import zoloImage from "../assets/Zolo.png";
+import zoloImage from "../assets/Zolo_enhanced.png";
 
 const Hero = () => {
   return (
@@ -26,11 +26,17 @@ const Hero = () => {
         </div>
         <div className="relative max-w-4xl mx-auto">
           <div className="absolute inset-0 bg-gradient-to-b from-blue-100/20 to-green-100/20 rounded-2xl"></div>
+          <br />
           <img
             src={zoloImage}
             alt="Mental wellness illustration"
             className="rounded-2xl shadow-xl w-full h-auto max-h-[60vh] object-contain"
           />
+          <br />
+          <h2 className="text-4xl sm:text-5xl text-center md:text-6xl font-bold text-gray-900 mb-6">
+            Hello!
+            <span className="text-blue-600"> I am Zolo </span>
+          </h2>
         </div>
       </div>
     </section>
