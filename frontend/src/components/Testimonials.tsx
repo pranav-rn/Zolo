@@ -3,7 +3,7 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     name: "Shreya Ghosh",
-    role: "Psychology Proffessor",
+    role: "Psychology Professor",
     content:
       "One of the biggest issue as a psychologist is to get people to open up. Sometimes, building a rapport may even take a year. This AI companion has been able to do that in a matter of weeks.",
     rating: 5,
