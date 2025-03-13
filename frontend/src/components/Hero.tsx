@@ -3,9 +3,9 @@ import zoloImage from "../assets/Zolo_enhanced.png";
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center">
+    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Your AI Companion for
             <span className="text-blue-600"> Mental Wellness</span>
@@ -24,13 +24,13 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className="mt-16 relative">
+        <div className="relative max-w-4xl mx-auto">
           <div className="absolute inset-0 bg-gradient-to-b from-blue-100/20 to-green-100/20 rounded-2xl"></div>
           <br />
           <img
             src={zoloImage}
             alt="Mental wellness illustration"
-            className="rounded-2xl shadow-xl w-1/3 mx-auto object-cover"
+            className="rounded-2xl shadow-xl w-full h-auto max-h-[60vh] object-contain"
           />
           <br />
           <h2 className="text-4xl sm:text-5xl text-center md:text-6xl font-bold text-gray-900 mb-6">
