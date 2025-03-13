@@ -24,9 +24,8 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-2xl mx-auto">
           <div className="absolute inset-0 bg-gradient-to-b from-blue-100/20 to-green-100/20 rounded-2xl"></div>
-          <br />
           <img
             src={zoloImage}
             alt="Mental wellness illustration"
