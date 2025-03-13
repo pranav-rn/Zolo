@@ -2,24 +2,24 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah J.",
+    name: "Shreya Ghosh",
+    role: "Psychology Proffessor",
+    content:
+      "One of the biggest issue as a psychologist is to get people to open up. Sometimes, building a rapport may even take a year. This AI companion has been able to do that in a matter of weeks.",
+    rating: 5,
+  },
+  {
+    name: "Dr. Sampurna",
+    role: "Doctor",
+    content:
+      "I have seen a lot of cases where a matter of a week's gap between appointments can be the difference between life and death. This AI companion has been able to provide immediate support to those in need.",
+    rating: 5,
+  },
+  {
+    name: "Shivani",
     role: "Student",
     content:
-      "This AI companion has been a game-changer for managing my anxiety during exam periods. It's like having a supportive friend available 24/7.",
-    rating: 5,
-  },
-  {
-    name: "Michael R.",
-    role: "Software Engineer",
-    content:
-      "The daily check-ins and mood tracking have helped me understand my stress patterns. The insights are surprisingly accurate and helpful.",
-    rating: 5,
-  },
-  {
-    name: "Emily T.",
-    role: "Healthcare Professional",
-    content:
-      "As someone who helps others with mental health, I'm impressed by how this AI companion provides meaningful support while knowing when to escalate to human professionals.",
+      "Being a person who has personally gone through mental health issues, I can say one of the biggest issue is not finding a compatible therapist. This AI companion has been able to provide me with the support I need and also provided me with a list of therapists who I can reach out to.",
     rating: 5,
   },
 ];
