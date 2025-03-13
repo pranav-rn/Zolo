@@ -3,6 +3,7 @@ import { useState } from "react";
 import { getGeminiResponse } from "../services/gemini";
 import { Send } from "lucide-react";
 import zoloImage from "../assets/Zolo.png";
+import ReactMarkdown from "react-markdown";
 
 interface Message {
   id: number;
@@ -95,7 +96,18 @@ export default function GeminiChat() {
                   : "bg-white shadow-md"
               }`}
             >
-              <p>{message.text}</p>
+              <div className="prose prose-sm max-w-none">
+                <ReactMarkdown
+                  components={{
+                    p: ({ children }) => <p className="mb-0">{children}</p>,
+                    strong: ({ children }) => (
+                      <strong className="font-bold">{children}</strong>
+                    ),
+                  }}
+                >
+                  {message.text}
+                </ReactMarkdown>
+              </div>
               <p
                 className={`text-xs mt-1 ${
                   message.sender === "user" ? "text-blue-100" : "text-gray-500"
