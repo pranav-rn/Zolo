@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { Send, User, Bot } from "lucide-react";
+import { User } from "lucide-react";
 import GeminiChat from "../GeminiChat";
+import zoloImage from "../../assets/Zolo.png";
+
 interface Message {
   id: number;
   text: string;
@@ -9,7 +11,7 @@ interface Message {
 }
 
 const Dashboard = () => {
-  const [messages, setMessages] = useState<Message[]>([
+  const [messages] = useState<Message[]>([
     {
       id: 1,
       text: "Hi! I'm Zolo, your friendly AI companion. How are you feeling today?",
@@ -17,34 +19,6 @@ const Dashboard = () => {
       timestamp: new Date(),
     },
   ]);
-  const [newMessage, setNewMessage] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!newMessage.trim()) return;
-
-    // Add user message
-    const userMessage: Message = {
-      id: messages.length + 1,
-      text: newMessage,
-      sender: "user",
-      timestamp: new Date(),
-    };
-
-    setMessages([...messages, userMessage]);
-    setNewMessage("");
-
-    // Simulate bot response (to be replaced with actual AI integration)
-    setTimeout(() => {
-      const botMessage: Message = {
-        id: messages.length + 2,
-        text: "I'm here to listen and support you. Would you like to tell me more about what's on your mind?",
-        sender: "bot",
-        timestamp: new Date(),
-      };
-      setMessages((prev) => [...prev, botMessage]);
-    }, 1000);
-  };
 
   return (
     <div className="flex h-screen bg-gray-100">
@@ -63,7 +37,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Chat Area */}
+      {/* Main Chat Area */}
       <div className="flex-1 flex flex-col">
         {/* Chat Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
@@ -77,14 +51,18 @@ const Dashboard = () => {
               }`}
             >
               <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                  message.sender === "user" ? "bg-blue-100" : "bg-green-100"
+                className={`w-8 h-8 rounded-full flex items-center justify-center overflow-hidden ${
+                  message.sender === "user" ? "bg-blue-100" : ""
                 }`}
               >
                 {message.sender === "user" ? (
                   <User className="w-5 h-5 text-blue-600" />
                 ) : (
-                  <Bot className="w-5 h-5 text-green-600" />
+                  <img
+                    src={zoloImage}
+                    alt="Zolo"
+                    className="w-full h-full object-cover"
+                  />
                 )}
               </div>
               <div
@@ -107,29 +85,9 @@ const Dashboard = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Message Input */}
-        <div className="border-t border-gray-200 p-4 bg-white">
-          <form onSubmit={handleSubmit} className="flex space-x-4">
-            <input
-              type="text"
-              value={newMessage}
-              onChange={(e) => setNewMessage(e.target.value)}
-              placeholder="Type your message..."
-              className="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-            <button
-              type="submit"
-              className="bg-blue-600 text-white rounded-lg px-4 py-2 hover:bg-blue-700 transition-colors flex items-center space-x-2"
-            >
-              <span>Send</span>
-              <Send className="w-4 h-4" />
-            </button>
-          </form>
+          <GeminiChat />
         </div>
       </div>
-      <GeminiChat />
     </div>
   );
 };
