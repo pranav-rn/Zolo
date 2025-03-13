@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import zoloImage from "../assets/zolo.png";
+import zoloImage from "../assets/Zolo.png";
 
 const Hero = () => {
   return (
