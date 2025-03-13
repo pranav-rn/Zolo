@@ -24,19 +24,11 @@ This repository contains the implementation of an AI-powered mental health assis
    git clone https://github.com/your-username/mental-health-ai.git
    cd mental-health-ai
    ```  
-2. 📦 Install dependencies:  
-   ```sh
-   pip install -r requirements.txt
-   ```  
-3. ▶️ Start the backend server:  
-   ```sh
-   python app.py
-   ```  
-4. 🌐 Navigate to the frontend directory and start the frontend:  
+2. 🌐 Navigate to the frontend directory and start the frontend:  
    ```sh
    cd frontend
    npm install  
-   npm start  
+   npm run dev
    ```  
 
 ## 🤝 Contribution  
