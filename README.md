@@ -3,6 +3,7 @@
 
 ## 🌟 Overview  
 This repository contains the implementation of an AI-powered mental health assistant designed to provide personalized support, guidance, and mental well-being resources. The system leverages Natural Language Processing (NLP) and Machine Learning (ML) to analyze user inputs and offer appropriate responses.  
+Note: Development is still under progress
 
 ## 🚀 Features  
 - 🗣️ **Conversational AI** – Engages users in natural conversations to provide emotional support.  
